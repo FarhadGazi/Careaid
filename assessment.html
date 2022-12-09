@@ -1,0 +1,2512 @@
+
+<!DOCTYPE html>
+<!--suppress CheckTagEmptyBody -->
+<html lang="">
+<head>
+    <!-- Required meta tags -->
+    <!--
+    <meta name="author" content="Md. Mujahidul Islam Khan">
+    <meta property="og:locale" content="en_US">
+    -->
+    
+    <title>Daisy :: Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="TCL Health Care Solution">
+    <meta name="author" content="Health Care Solution, design by: https://techcloudltd.com/">
+    <meta property="og:site_name" content="NHS support health care solution">
+    <meta property="og:url" content="https://techcloudltd.com">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!--script type="application/ld+json">
+        {
+            "name": "General ERP - An easy platform for managing organization data",
+            "description": "Best ERP solution in Bangladesh",
+            "author":
+            {
+                "@type": "Person",
+                "name": "Md. Mujahidul Islam Khan"
+            },
+            "@type": "WebSite",
+            "url": "",
+            "headline": "Sign In",
+            "@context": "http://suvastu.com"
+        }
+    </script--><!-- End SEO tag -->
+
+    <!-- BEGIN BASE STYLES -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="vendor/jvectormap/jquery-jvectormap-2.0.3.min.css">
+    <link rel="stylesheet" href="vendor/morrisjs/morris.min.css">
+    <link rel="stylesheet" href="vendor/nestable/jquery-nestable.css">
+    <link rel="stylesheet" href="vendor/dropify/css/dropify.min.css">
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/color_skins.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="vendor/jquery/jquery.min.js"></script>
+</head>
+
+
+<body>
+<div id="wrapper">
+    <!--<header class="app-header app-header-dark">
+        <div th:replace="/fragments/header"></div>
+    </header>-->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="index.html"><img src="images/logo.svg" alt="Lucid Logo" class="img-responsive logo"></a>
+            </div>
+
+            <div class="navbar-right">
+                <!--<form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default"><i class="icon-magnifier"></i></button>
+                </form>-->
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="app-events.html" class="icon-menu d-none d-sm-block d-md-none d-lg-block"><i class="icon-calendar"></i></a></li>
+                        <!--<li><a href="app-chat.html" class="icon-menu d-none d-sm-block"><i class="icon-bubbles"></i></a></li>-->
+                        <li><a href="app-inbox.html" class="icon-menu d-none d-sm-block"><i class="icon-envelope"></i><span class="notification-dot"></span></a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications animated shake">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Campaign <strong>Holiday Sale</strong> is nearly reach budget limit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-like text-success"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Your New Campaign <strong>Holiday Sale</strong> is approved.</p>
+                                                <span class="timestamp">11:30 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-pie-chart text-info"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Website visits from Twitter is 27% higher than last week.</p>
+                                                <span class="timestamp">04:00 PM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-danger"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Error on website analytics configurations</p>
+                                                <span class="timestamp">Yesterday</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown"><i class="icon-equalizer"></i></a>
+                            <ul class="dropdown-menu user-menu menu-icon animated bounceIn">
+                                <li class="menu-heading">ACCOUNT SETTINGS</li>
+                                <li><a href="javascript:void(0);"><i class="icon-note"></i> <span>Basic</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="icon-equalizer"></i> <span>Preferences</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="icon-lock"></i> <span>Privacy</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="icon-bell"></i> <span>Notifications</span></a></li>
+                                <li class="menu-heading">BILLING</li>
+                                <li><a href="javascript:void(0);"><i class="icon-credit-card"></i> <span>Payments</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="icon-printer"></i> <span>Invoices</span></a></li>
+                                <li><a href="javascript:void(0);"><i class="icon-refresh"></i> <span>Renewals</span></a></li>
+                            </ul>
+                        </li>-->
+                        <li><a href="page-login.html" class="icon-menu"><i class="icon-login"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Left side column. contains the logo and sidebar -->
+    <aside class="app-aside app-aside-light app-aside-expand-md">
+        <sec:authorize access="isAuthenticated()" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="images/user.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Jessica Doe</strong></a>
+                    <ul class="dropdown-menu dropdown-menu-right account animated flipInY">
+                        <li><a href="page-profile2.html"><i class="icon-user"></i>My Profile</a></li>
+                        <li><a href="app-inbox.html"><i class="icon-envelope-open"></i>Messages</a></li>
+                        <li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+                        <li class="divider"></li>
+                        <li><a href="page-login.html"><i class="icon-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-4">
+                        <h6>30</h6>
+                        <small>Services</small>
+                    </div>
+                    <div class="col-4">
+                        <h6>100+</h6>
+                        <small>Carers</small>
+                    </div>
+                    <div class="col-4">
+                        <h6>200+</h6>
+                        <small>Clients</small>
+                    </div>
+                </div>
+            </div>
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#hr_menu">Admin</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#project_menu">Client</a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#sub_menu">Carer</a></li>
+                <!--<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#setting"><i class="icon-settings"></i></a></li>-->
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane animated fadeIn active" id="hr_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li><a href="/page/dashboard"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                            <li>
+                                <a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Basic Setup</span></a>
+                                <ul>
+                                    <li><a href="/page/region">Region</a></li>
+                                    <li><a href="#">Company Information</a></li>
+                                    <li><a href="#">Contacts</a></li>
+                                    <li><a href="#">Users</a></li>
+                                    <li><a href="#">Reset Password</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
+                                <ul>
+                                    <li><a href="/page/addEmployee">Add Employee</a></li>
+                                    <li><a href="/page/carerList">Carers</a></li>
+                                    <li><a href="/page/employeeList">Administration</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#Accounts" class="has-arrow"><i class="icon-briefcase"></i><span>Clients</span></a>
+                                <ul>
+                                    <li><a href="#">Clients</a></li>
+                                    <li><a href="#">Care Plans</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">Medication</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#Report" class="has-arrow"><i class="icon-bar-chart"></i><span>Report</span></a>
+                                <ul>
+                                    <li><a href="report-expense.html">Expense Report</a></li>
+                                    <li><a href="report-invoice.html">Invoice Report</a></li>
+                                </ul>
+                            </li>
+                           <!-- <li><a href="app-users.html"><i class="icon-user"></i>Users</a></li>-->
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="project_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="/page/clients"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                            <li><a href="#"><i class="icon-envelope"></i>Inbox</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Diary</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Schedule</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Medication</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Care Plans</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Invoice</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane animated fadeIn" id="sub_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active"><a href="/page/carers"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+                            <li><a href="#"><i class="icon-envelope"></i>Inbox</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Diary</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Schedule</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Time-off</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Checklist</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Skills</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Training</a></li>
+                            <li><a href="#"><i class="icon-bubbles"></i>Invoice</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</sec:authorize>
+
+    </aside>
+    <main class="app-main" id="main-content">
+        <div>
+            <div class="container-fluid">
+                <div class="block-header">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-8 col-sm-12">
+                            <h2><a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a> Client Assessment</h2>
+                            <ul class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+                                <li class="breadcrumb-item">Pages</li>
+                                <li class="breadcrumb-item active">Client Assessment</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+        
+        <!--                Full Needs Assessment -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Full Needs Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <!--                one -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Date of Assessment:</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Date of commencement:</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Service Users Name:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Service User Next of Kin:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Service Users GP:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Service Users Pharmacist:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Prefers to be called:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>DOB:</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Age:</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-9">
+                                                        <div class="form-group">
+                                                            <label>Address:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Contact Number 1:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Contact Number 2:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                two -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingTwo">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Existing Support Network <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Name :</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Status:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">District Nurse</option>
+                                                                <option value="">Family member</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Address:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Telephone No.:</label>
+                                                            <input type="number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Assistance provided:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                three -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingThree">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Medical Conditions <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Breathless:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Diabetes:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Heart Problems:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Mental Health Problems:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Epilepsy:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Stroke:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked>
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Other (Specify)</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>How do any medical conditions you have impact upon your life? Please specify below</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                four -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapseOne">
+                                                    Mobility <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <h6>Inside your home</h6>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tr>
+                                                            <th></th>
+                                                            <th>Independently</th>
+                                                            <th>With Minor Help</th>
+                                                            <th>With Major Help</th>
+                                                            <th>Unable</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Fully mobile</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Weight bearing</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Able to walk short distances</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Able to manage</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+        
+                                                <h6>Stairs</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Is the service user able to walk unaided?:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Is the service wheelchair bound?:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>a) Do you require any support from our staff with the above activities?:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Do you require any support with mobility outside of your home?:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 col-lg-12">
+                                                        <h6>If the answer to 'a' or 'b' is yes, please specify below:</h6>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>What support you would like:</label>
+                                                            <textarea name="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>How you would like us to provide it:</label>
+                                                            <textarea name="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Moving & Handling Risk Assessment Required:</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                five -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapseOne">
+                                                    Communications <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Sight:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Good</option>
+                                                                <option value="">Wears Glasses</option>
+                                                                <option value="">Registered Blind</option>
+                                                                <option value="">Others (specify below):</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Are Braille documents required?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Sight:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Good</option>
+                                                                <option value="">Reduced</option>
+                                                                <option value="">Uses Hearing aid</option>
+                                                                <option value="">Others (specify below):</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Are Braille documents required?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you sign?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>If yes, specify language (Makaton, BSL)</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Speech:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Good</option>
+                                                                <option value="">Unclear</option>
+                                                                <option value="">Mute</option>
+                                                                <option value="">Others (specify below):</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-6 col-lg-2">
+                                                        <div class="form-group">
+                                                            <label>What is your first language?</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>  
+                                                    <div class="col-md-6 col-lg-2">
+                                                        <div class="form-group">
+                                                            <label>Is a native speaker or interpreter required? </label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-2">
+                                                        <div class="form-group">
+                                                            <label>Do you sign?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>If yes, specify language (Makaton, BSL)</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                six -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapseOne">
+                                                    Spiritual Needs <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse6" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <h6>Ethnic origin (please specify)</h6>
+                                                                <div class="form-group">
+                                                                    <label>Is there any information related to your ethnic origin that you would like us to be aware of?</label>
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <h6>Religion (please specify)</h6>
+                                                                    <div class="form-group">
+                                                                        <label>Is there any information related to your ethnic origin that you would like us to be aware of?</label>
+                                                                        <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <h6>Nutrition & Hydration</h6>
+                                                            <div class="table-responsive">
+                                                                <table class="table table-bordered">
+                                                                    <tbody><tr>
+                                                                        <th></th>
+                                                                        <th>Independent</th>
+                                                                        <th>Requires assistance</th>
+                                                                        <th>Unable</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Preparing meals</th>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Preparing hot/cold drinks</th>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Eating</th>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Drinking</th>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th>Shopping</th>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                        <td>
+                                                                            <input type="text" class="form-control">
+                                                                        </td>
+                                                                       
+                                                                    </tr>
+                                                                </tbody></table>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6 col-lg-6">
+                                                                <div class="form-group">
+                                                                    <label>Is there any information related to your ethnic origin that you would like us to be aware of?</label>
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                seven -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapseOne">
+                                                    Elimination <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse7" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Bladder:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Continent</option>
+                                                                <option value="">Incontinent</option>
+                                                                <option value="">Catheter in situ</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Bowels:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Continent</option>
+                                                                <option value="">Incontinent</option>
+                                                             </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you require any support from our staff with the above activities?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <h6>If yes, please specify below:</h6>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-9">
+                                                            <div class="form-group">
+                                                                <label>1) what support you would like</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-9">
+                                                            <div class="form-group">
+                                                                <label>2) how you would like us to provide it.</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                nine -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal Hygiene <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse9" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <tbody><tr>
+                                                            <th></th>
+                                                            <th>Independent</th>
+                                                            <th>Manages with assistance</th>
+                                                            <th>Unable to manage</th>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Skin</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Hair</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Mouth</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Nails</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                           
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Clothing (dressing)</th>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control">
+                                                            </td>
+                                                           
+                                                        </tr>
+                                                    </tbody></table>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you require any support from our staff with the above activities?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <div class="col-md-6 col-lg-6">
+                                                    <h6>If yes, please specify below:</h6>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-9">
+                                                            <div class="form-group">
+                                                                <label>1) what support you would like</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-9">
+                                                            <div class="form-group">
+                                                                <label>2) how you would like us to provide it.</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                ten -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapseOne">
+                                                    Environment <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse10" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Heating:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Oil</option>
+                                                                <option value="">Gas</option>
+                                                                <option value="">Electricity</option>
+                                                                <option value="">Open fire</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Heating management:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Independent</option>
+                                                                <option value="">Requires assistance</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Cleaning:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value=""> Independent</option>
+                                                                <option value="">Manages with assistance</option>
+                                                                <option value="">Unable to clean</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Laundry:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Independent</option>
+                                                                <option value="">Manages with assistance</option>
+                                                                <option value="">Unable to clean</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you require any support from our staff with the above activities?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <div class="col">
+                                                    <h6>If yes, please specify below:</h6>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>1) what support you would like</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-md-6 col-lg-6">
+                                                            <div class="form-group">
+                                                                <label>2) how you would like us to provide it.</label>
+                                                                <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                eleven -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapseOne">
+                                                    Security <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse9" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Sheltered Housing</option>
+                                                                <option value="">Lives with Family</option>
+                                                                <option value="">Lives alone</option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Access Arrangements:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Carer can open door</option>
+                                                                <option value="">Door can be opened for carer </option>
+                                                               
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                
+                                               
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Key Safe Number and location:</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Name of Emergency Key Holder:</label>
+                                                                    <input type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div class="form-group">
+                                                                    <label>Telephone Number:</label>
+                                                                    <input type="number" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Is there anything about your security arrangements that our staff should know?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapseOne">
+                                                    Financial Management <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse10" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Are you able to manage your financial affairs?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <h6>If no, who manages them for you?</h6>                           
+                                                        <div class="form-group">
+
+                                                            <label>Name and contact details:</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do they have an LPA?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Can a copy of the LPA be provided?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapseOne">
+                                                    Medication <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse11" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody><tr>
+                                                                <th></th>
+                                                                <th>Independent</th>
+                                                                <th>Requires assistance</th>
+                                                                <th>Unable to collect</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Collecting prescriptions</th>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Collecting medication</th>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Taking medication</th>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            
+                                                        </tbody></table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    
+                                                        <div class="col-md-6 col-lg-3">
+                                                            <div class="form-group">
+                                                                <label>Do you require any support from our staff with the above activities?</label>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" class="switch-input" checked="">
+                                                                    <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                    <span class="switch-handle"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-6">
+                                                            <h6>If yes, please specify below:</h6>
+                                                            <div class="form-group">
+                                                                <div class="col-md-6 col-lg-9">
+                                                                    <div class="form-group">
+                                                                        <label>1) what support you would like</label>
+                                                                        <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="col-md-6 col-lg-9">
+                                                                    <div class="form-group">
+                                                                        <label>2) how you would like us to provide it.</label>
+                                                                        <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 col-lg-3">
+                                                            <div class="form-group">
+                                                                <label>Medication Risk Assessment required:</label>
+                                                                <label class="switch">
+                                                                    <input type="checkbox" class="switch-input" checked="">
+                                                                    <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                    <span class="switch-handle"></span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapseOne">
+                                                    Social Life/Interests <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse12" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Would you like some help to start/continue attending these events?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <h6>If yes, please provide more details:</h6>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                    
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                    <label>When?</label>
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                    <label>How often?</label>
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you require any support from our staff with the above activities?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <h6>If yes, please provide more details:</h6>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                  
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <h6>To help us get to know you better we would like to know a little about your life. </h6>
+                                                <p>You do not need to answer these questions unless you want to. </p>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-4">
+                                                        <div class="form-group">
+                                                            <label>Are you/were you married or have a special person in your life?</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you have children/grandchildren?</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you/did you work? What did you do?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Do you have things that you like watching on television or particular favourite radio shows? What are they?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Do you have hobbies? What are they?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse13" aria-expanded="true" aria-controls="collapseOne">
+                                                    Pets <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse13" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you have any pets?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Do you require and help from our staff in caring for your pets?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <h6>what support you would like</h6>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                  
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <h6>how you would like us to provide it.</h6>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                  
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div> 
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse14" aria-expanded="true" aria-controls="collapseOne">
+                                                    Additional Comments <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse14" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <h6>[Insert any additional information gained which may help to build a person centre care plan]</h6>
+                                                        <div class="form-group">
+                                                            <div class="col-md-6 col-lg-9">
+                                                                <div class="form-group">
+                                                                  
+                                                                    <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse15" aria-expanded="true" aria-controls="collapseOne">
+                                                    Aims <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse15" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <h6>Please tell us what you would like to achieve by having our staff give you some assistance</h6>
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Encourage the individual to think about the 7 outcomes for users of homecare services:</label>
+                                                            <select name="" id="" class="form-control">
+                                                                <option value="">Improved Health and Well Being</option>
+                                                                <option value="">Improved Quality of Life</option>
+                                                                <option value="">Making a Positive Contribution</option>
+                                                                <option value="">Increased Choice and Control</option>
+                                                                <option value="">Freedom from Discrimination and Harassment.  </option>
+                                                                <option value="">Economic Well Being</option>
+                                                                <option value="">Maintaining Personal Dignity and Respect</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                              
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                                            
+                                                        <div class="form-group">
+
+                                                            <label>The things I would like to achieve are:</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!-- collapse item -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#collapse16" aria-expanded="true" aria-controls="collapseOne">
+                                                    Visit Planning Sheet <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="collapse16" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <h6>Nature of service required (Enter code for example, Personal care (PC), Domestic support(DS), Social/supporting people (SOC), Night support (NS), Supervision (SP) etc.)</h6>
+                                                    <div class="table-responsive">
+                                                        <table class="table table-bordered">
+                                                            <tbody><tr>
+                                                                <th>Service</th>
+                                                                <th>Time</th>
+                                                                <th>Number of carers</th>
+                                                                <th>Monday</th>
+                                                                <th>Tuesday</th>
+                                                                <th>Wednesday</th>
+                                                                <th>Thursday</th>
+                                                                <th>Friday</th>
+                                                                
+                                                                <th>Saturday</th>
+                                                                <th>Sunday</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                
+                                                                
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                               
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                               
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                               
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                               
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td><td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                                <td>
+                                                                    <input type="text" class="form-control">
+                                                                </td>
+                                                               
+                                                            </tr>
+                                                        </tbody></table>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                                            
+                                                        <div class="form-group">
+
+                                                            <label>Agree a schedule of visits with the Service user. Review after 6 weeks of support:</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+        <!--                 medication risk assesment -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Medical Risk Assessment
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <p>test</p>
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- manual risk -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Manual Handling Risk Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <!--                one -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mhra1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Basics <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mhra1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mhra1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Others <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mhra1" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- mental capacity -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Mental Capacity Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <!--                one -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mca1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mca1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <h6>Section 1 - Capacity Assessment</h6>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Have you explained to the service user the purpose of this assessment?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Does the Service User have the capacity to retain the necessary information on which to make a decision?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Is the service user able to weigh up and discuss the potential advantages and disadvantages of any decision action with you?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Is the Service User able to communicate a decision on the matter in question? <br> NB This may be nonverbal i.e. writing or through sign language, but it is important that there is consistency of response</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Is there any reason to think that the person might not have the capacity to decide to use this service?</label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Is there any reason to think that the person might not have the capacity to make decisions while using this service? </label>
+                                                            <label class="switch">
+                                                                <input type="checkbox" class="switch-input" checked="">
+                                                                <span class="switch-label" data-on="Yes" data-off="No"></span>
+                                                                <span class="switch-handle"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <h6>If the answer to either question 5 or 6 is YES, please going on to Section 2 of this part of the form. </h6>
+                                                <h6>If the answer to both questions 5 and 6 is NO, please answer the box below.</h6>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-6">
+                                                        <div class="form-group">
+                                                            <label>Does the person need help to make these decisions? If so, what is the best way of supporting them to do so?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <h6>Section 2 - For people who may not have capacity for relevant decisions</h6>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>What sort of decisions is the person able to make?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>What sort of decisions does the person have difficulty with? </label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>How is this difficulty apparent- what makes you, and/or those who are discussing this with, feel that the person is having difficulty with these decisions?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Does the amount of difficulty fluctuate? </label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Is there any further help or support that the person could be given in order to make more of their decisions themselves?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-lg-3">
+                                                        <div class="form-group">
+                                                            <label>Does the Service User have capacity in respect of the specific question detailed above?</label>
+                                                            <textarea name="" id="" rows="3" class="form-control"></textarea>
+                                                        </div>
+                                                        <p>Comment:</p>
+                                                        <p>If the Service User does not have capacity in relation to this specific issue, they cannot make a decision or consent, therefore decisions about proceeding will need to be made on the basis of the Service User’s best interests. Appropriate authority (Professionals Social Worker, CHC case holder etc) for further capacity assessment and Deprivation of Liberty Review.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                two -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mca2" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mca2" class="collapse " aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                three -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mca3" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mca3" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                four -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mca4" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mca4" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--                five -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#mca5" aria-expanded="true" aria-controls="collapseOne">
+                                                    Personal & Contact Details of Service User <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="mca5" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- generic risk -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Generic Risk Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <p>Test</p>
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- fall risk -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Fall Risk Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <!--                one -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#fra1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Fall Risk Assessment Tool (FRAT) <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="fra1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- fire risk-->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Fire Risk Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <p>Test</p>
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                        <!-- covid 19 risk -->
+                        <div class="card">
+                            <div class="header">
+                                <h2>Covid-19 Risk Assessment</h2>
+                            </div>
+                            <div class="body">
+                                <div class="accordion" id="accordionExample">
+                                    <!-- one -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#cra1" aria-expanded="true" aria-controls="collapseOne">
+                                                    Basics <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="cra1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    <!--  two -->
+                                    <div class="card mb-2">
+                                        <div class="card-header" id="headingOne">
+                                            <h2 class="mb-0">
+                                                <button class="btn btn-block text-left" type="button" data-toggle="collapse" data-target="#cra2" aria-expanded="true" aria-controls="collapseOne">
+                                                    Detailed Risk Assessment <i class="fa fa-plus float-right"></i>
+                                                </button>
+                                            </h2>
+                                        </div>
+        
+                                        <div id="cra2" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                test
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                </div>
+        
+                                <p class="text-center">
+                                    <button class="btn btn-success btn-lg">Save</button>
+                                </p>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div></div>
+</div>
+
+<script src="bundles/libscripts.bundle.js"></script>
+<script src="bundles/vendorscripts.bundle.js"></script>
+
+<script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+
+<script src="bundles/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+<script src="bundles/morrisscripts.bundle.js"></script> <!-- Morris Plugin Js -->
+<script src="bundles/knob.bundle.js"></script> <!-- Jquery Knob-->
+<script src="vendor/nestable/jquery.nestable.min.js"></script> <!-- Jquery Nestable -->
+
+<script src="bundles/mainscripts.bundle.js"></script>
+<!--<script th:src="@{/vendor/jstree/jstree.min.js}"></script>-->
+<script src="vendor/LightboxGallery/mauGallery.min.js"></script>
+<script src="vendor/LightboxGallery/scripts.js"></script>
+<script src="vendor/dropify/js/dropify.min.js"></script>
+<script src="js/index2.js"></script>
+
+
+<script>
+   $(document).ready(function(){
+       //alert("works");
+        /*$('#stacked-menu ul.menu > li').on('click', function (e) {
+            localStorage.setItem('activeTab', $(e.target).attr('href'));
+        });
+        let activeTab = localStorage.getItem('activeTab');
+        if(activeTab){
+            let currentTab = $('#stacked-menu a[href="' + activeTab + '"]');
+           if($.trim(currentTab.attr('href')) !== "#" && isCompact === false){
+               currentTab.closest('li').addClass('has-active');
+               currentTab.parents('li').addClass('has-open');
+           }
+        }*/
+    });
+</script> <!-- END PLUGINS JS -->
+
+
+
+</body>
+</html>
